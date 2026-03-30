@@ -128,17 +128,17 @@ export function MarketingPage() {
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">노출수</th>
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">클릭수</th>
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">
-                  <span className="inline-flex items-center gap-1">CTR <InfoTooltip text="클릭률(Click Through Rate). 노출수 대비 클릭수의 비율로, 광고가 얼마나 관심을 끌었는지를 나타냅니다." /></span>
+                  <span className="inline-flex items-center justify-end gap-1">CTR <InfoTooltip align="right" text="클릭률(Click Through Rate). 노출수 대비 클릭수의 비율로, 광고가 얼마나 관심을 끌었는지를 나타냅니다." /></span>
                 </th>
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">
-                  <span className="inline-flex items-center gap-1">전환수 <InfoTooltip text="광고를 통해 실제 상담 신청, 예약 등 목표 행동을 완료한 건수입니다." /></span>
+                  <span className="inline-flex items-center justify-end gap-1">전환수 <InfoTooltip align="right" text="광고를 통해 실제 상담 신청, 예약 등 목표 행동을 완료한 건수입니다." /></span>
                 </th>
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">
-                  <span className="inline-flex items-center gap-1">CPA <InfoTooltip text="전환당 비용(Cost Per Acquisition). 전환 1건을 획득하는 데 소요된 평균 광고비입니다. 낮을수록 효율적입니다." /></span>
+                  <span className="inline-flex items-center justify-end gap-1">CPA <InfoTooltip align="right" text="전환당 비용(Cost Per Acquisition). 전환 1건을 획득하는 데 소요된 평균 광고비입니다. 낮을수록 효율적입니다." /></span>
                 </th>
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">매출</th>
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">
-                  <span className="inline-flex items-center gap-1">ROAS <InfoTooltip text="광고 수익률(Return On Ad Spend). 광고비 대비 매출의 비율로, 100% 이상이면 광고비 이상의 매출을 올린 것입니다." /></span>
+                  <span className="inline-flex items-center justify-end gap-1">ROAS <InfoTooltip align="right" text="광고 수익률(Return On Ad Spend). 광고비 대비 매출의 비율로, 100% 이상이면 광고비 이상의 매출을 올린 것입니다." /></span>
                 </th>
               </tr>
             </thead>

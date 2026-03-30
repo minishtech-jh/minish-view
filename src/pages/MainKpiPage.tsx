@@ -155,12 +155,24 @@ export function MainKpiPage() {
           </div>
           <div className="h-64">
             <ResponsiveContainer width="100%" height={250}>
-              <LineChart data={kpiSummary.monthlyTrend}>
+              <LineChart data={kpiSummary.monthlyTrend[metric]}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
                 <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#9ca3af' }} />
-                <YAxis tick={{ fontSize: 11, fill: '#9ca3af' }} />
+                <YAxis
+                  tick={{ fontSize: 11, fill: '#9ca3af' }}
+                  tickFormatter={(v) =>
+                    metric === '매출액' || metric === '확정금액'
+                      ? `${(v / 100_000_000).toFixed(1)}억`
+                      : v.toLocaleString()
+                  }
+                />
                 <Tooltip
                   contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e7eb' }}
+                  formatter={(value: number) =>
+                    metric === '매출액' || metric === '확정금액'
+                      ? `${value.toLocaleString()}원`
+                      : `${value.toLocaleString()}${metric === '신환수' ? '명' : '건'}`
+                  }
                 />
                 <Legend
                   iconType="plainline"
