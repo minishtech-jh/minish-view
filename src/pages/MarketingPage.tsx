@@ -1,4 +1,4 @@
-import { Info, TrendingUp, TrendingDown } from 'lucide-react'
+import { Info } from 'lucide-react'
 import {
   BarChart,
   Bar,
@@ -60,7 +60,7 @@ export function MarketingPage() {
                 <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#9ca3af' }} />
                 <YAxis tick={{ fontSize: 11, fill: '#9ca3af' }} tickFormatter={(v) => `${(v / 1_000_000).toFixed(0)}M`} />
                 <Tooltip
-                  formatter={(value: number) => `${value.toLocaleString()}원`}
+                  formatter={(value: any) => `${Number(value).toLocaleString()}원`}
                   contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e7eb' }}
                 />
                 <Legend wrapperStyle={{ fontSize: 11, paddingTop: 8 }} />
@@ -94,7 +94,7 @@ export function MarketingPage() {
                   ))}
                 </Pie>
                 <Tooltip
-                  formatter={(value: number) => `${value.toLocaleString()}원`}
+                  formatter={(value: any) => `${Number(value).toLocaleString()}원`}
                   contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e7eb' }}
                 />
               </PieChart>
