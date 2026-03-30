@@ -1,4 +1,4 @@
-import { Info } from 'lucide-react'
+import { InfoTooltip } from '../components/InfoTooltip'
 import {
   BarChart,
   Bar,
@@ -31,7 +31,7 @@ export function MarketingPage() {
     <div className="p-6 lg:p-8 pb-24 lg:pb-8 space-y-6">
       <div className="flex items-center gap-2">
         <h1 className="text-xl lg:text-2xl font-bold text-gray-900">채널별 마케팅 성과</h1>
-        <Info size={16} className="text-gray-400" />
+        <InfoTooltip size={16} text="네이버, 구글, 인스타그램 등 광고 채널별 비용 대비 성과(ROAS)를 분석합니다. 광고비 추이, 비중, CTR, CPA 등 상세 지표를 확인할 수 있습니다." />
       </div>
 
       {/* Summary Cards */}
@@ -127,11 +127,19 @@ export function MarketingPage() {
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">광고비</th>
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">노출수</th>
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">클릭수</th>
-                <th className="text-right py-2.5 px-2 text-gray-500 font-medium">CTR</th>
-                <th className="text-right py-2.5 px-2 text-gray-500 font-medium">전환수</th>
-                <th className="text-right py-2.5 px-2 text-gray-500 font-medium">CPA</th>
+                <th className="text-right py-2.5 px-2 text-gray-500 font-medium">
+                  <span className="inline-flex items-center gap-1">CTR <InfoTooltip text="클릭률(Click Through Rate). 노출수 대비 클릭수의 비율로, 광고가 얼마나 관심을 끌었는지를 나타냅니다." /></span>
+                </th>
+                <th className="text-right py-2.5 px-2 text-gray-500 font-medium">
+                  <span className="inline-flex items-center gap-1">전환수 <InfoTooltip text="광고를 통해 실제 상담 신청, 예약 등 목표 행동을 완료한 건수입니다." /></span>
+                </th>
+                <th className="text-right py-2.5 px-2 text-gray-500 font-medium">
+                  <span className="inline-flex items-center gap-1">CPA <InfoTooltip text="전환당 비용(Cost Per Acquisition). 전환 1건을 획득하는 데 소요된 평균 광고비입니다. 낮을수록 효율적입니다." /></span>
+                </th>
                 <th className="text-right py-2.5 px-2 text-gray-500 font-medium">매출</th>
-                <th className="text-right py-2.5 px-2 text-gray-500 font-medium">ROAS</th>
+                <th className="text-right py-2.5 px-2 text-gray-500 font-medium">
+                  <span className="inline-flex items-center gap-1">ROAS <InfoTooltip text="광고 수익률(Return On Ad Spend). 광고비 대비 매출의 비율로, 100% 이상이면 광고비 이상의 매출을 올린 것입니다." /></span>
+                </th>
               </tr>
             </thead>
             <tbody>

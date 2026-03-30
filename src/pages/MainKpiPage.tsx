@@ -2,10 +2,10 @@ import { useState } from 'react'
 import {
   TrendingUp,
   TrendingDown,
-  Info,
   Calendar,
   Building2,
 } from 'lucide-react'
+import { InfoTooltip } from '../components/InfoTooltip'
 import {
   LineChart,
   Line,
@@ -40,7 +40,7 @@ export function MainKpiPage() {
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <h1 className="text-xl lg:text-2xl font-bold text-gray-900">Main KPI 분석</h1>
-          <Info size={16} className="text-gray-400" />
+          <InfoTooltip size={16} text="병원의 핵심 성과 지표(KPI)를 종합적으로 분석합니다. 전월 대비 증감, 일평균 실적, 목표 달성률 등을 한눈에 확인할 수 있습니다." />
         </div>
         <div className="flex flex-wrap gap-2 items-center text-sm">
           <span className="text-gray-500">분석기간 :</span>
@@ -62,7 +62,7 @@ export function MainKpiPage() {
       <div className="bg-white rounded-[var(--radius-card)] p-5 shadow-[var(--shadow-card)]">
         <div className="flex items-center gap-2 mb-4">
           <h2 className="text-sm font-semibold text-gray-900">전월 동기간 대비</h2>
-          <Info size={14} className="text-gray-400" />
+          <InfoTooltip text="전월 같은 기간의 실적과 비교한 증감률입니다. 동일 영업일 수 기준으로 산출됩니다." />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-3">
           {kpiSummary.prevPeriod.map((item) => (
@@ -84,7 +84,7 @@ export function MainKpiPage() {
       <div className="bg-white rounded-[var(--radius-card)] p-5 shadow-[var(--shadow-card)]">
         <div className="flex items-center gap-2 mb-4">
           <h2 className="text-sm font-semibold text-gray-900">당월 일평균 대비</h2>
-          <Info size={14} className="text-gray-400" />
+          <InfoTooltip text="당월 일평균 실적과 기준일 실적을 비교합니다. 일별 편차를 파악하여 운영 효율을 점검할 수 있습니다." />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-3">
           {kpiSummary.dailyAvg.map((item) => (
@@ -107,7 +107,7 @@ export function MainKpiPage() {
         <div className="bg-white rounded-[var(--radius-card)] p-5 shadow-[var(--shadow-card)]">
           <div className="flex items-center gap-2 mb-4">
             <h2 className="text-sm font-semibold text-gray-900">주요 KPI</h2>
-            <Info size={14} className="text-gray-400" />
+            <InfoTooltip text="핵심 KPI의 목표 대비 달성률을 표시합니다. 프로그레스 바로 현재 진행 상황을 직관적으로 확인할 수 있습니다." />
           </div>
           <div className="space-y-4">
             {kpiSummary.mainKpis.map((kpi) => (
@@ -138,7 +138,7 @@ export function MainKpiPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
             <div className="flex items-center gap-2">
               <h2 className="text-sm font-semibold text-gray-900">내원경로별 분석</h2>
-              <Info size={14} className="text-gray-400" />
+              <InfoTooltip text="광고, 소개, 협력, 기타 등 내원경로별 월별 추이를 분석합니다. 분석지표를 변경하여 다양한 관점에서 비교할 수 있습니다." />
             </div>
             <div className="flex items-center gap-2">
               <span className="text-xs text-gray-500">분석지표</span>
@@ -180,7 +180,7 @@ export function MainKpiPage() {
       <div className="bg-white rounded-[var(--radius-card)] p-5 shadow-[var(--shadow-card)]">
         <div className="flex items-center gap-2 mb-4">
           <h2 className="text-sm font-semibold text-gray-900">{kpiSummary.baseMonth} KPI 현황</h2>
-          <Info size={14} className="text-gray-400" />
+          <InfoTooltip text="내원경로별 매출액, 확정금액, 신환수, 진료적단가 등 상세 KPI를 테이블로 확인합니다." />
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-xs">

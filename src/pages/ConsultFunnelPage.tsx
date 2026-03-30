@@ -1,4 +1,4 @@
-import { Info } from 'lucide-react'
+import { InfoTooltip } from '../components/InfoTooltip'
 import {
   BarChart,
   Bar,
@@ -20,7 +20,7 @@ export function ConsultFunnelPage() {
     <div className="p-6 lg:p-8 pb-24 lg:pb-8 space-y-6">
       <div className="flex items-center gap-2">
         <h1 className="text-xl lg:text-2xl font-bold text-gray-900">통합 상담 퍼널</h1>
-        <Info size={16} className="text-gray-400" />
+        <InfoTooltip size={16} text="정보제공부터 수납완료까지 상담 전환 단계별 성과를 추적합니다. 채널별 전환율, 주간 추이, 상담실장별 성과를 종합적으로 확인할 수 있습니다." />
       </div>
 
       {/* Funnel Visualization */}

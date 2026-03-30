@@ -1,4 +1,5 @@
-import { Info, TrendingUp, TrendingDown, ExternalLink } from 'lucide-react'
+import { TrendingUp, TrendingDown, ExternalLink } from 'lucide-react'
+import { InfoTooltip } from '../components/InfoTooltip'
 import {
   AreaChart,
   Area,
@@ -27,7 +28,7 @@ export function SearchTrafficPage() {
     <div className="p-6 lg:p-8 pb-24 lg:pb-8 space-y-6">
       <div className="flex items-center gap-2">
         <h1 className="text-xl lg:text-2xl font-bold text-gray-900">외부 검색/유입 추이</h1>
-        <Info size={16} className="text-gray-400" />
+        <InfoTooltip size={16} text="자연 검색, 유료 광고, 소셜, 직접 유입 등 외부 채널별 트래픽 현황과 주간 추이를 분석합니다. 주요 키워드 검색량과 유입 소스별 성과도 확인할 수 있습니다." />
       </div>
 
       {/* Summary */}
