@@ -168,10 +168,10 @@ export function MainKpiPage() {
                 />
                 <Tooltip
                   contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e5e7eb' }}
-                  formatter={(value: number) =>
+                  formatter={(value) =>
                     metric === '매출액' || metric === '확정금액'
-                      ? `${value.toLocaleString()}원`
-                      : `${value.toLocaleString()}${metric === '신환수' ? '명' : '건'}`
+                      ? `${Number(value).toLocaleString()}원`
+                      : `${Number(value).toLocaleString()}${metric === '신환수' ? '명' : '건'}`
                   }
                 />
                 <Legend
