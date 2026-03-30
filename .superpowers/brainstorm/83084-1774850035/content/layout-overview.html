@@ -1,0 +1,154 @@
+<h2>Minish View - 전체 레이아웃</h2>
+<p class="subtitle">사이드바 + 헤더 + 컨텐츠 영역 구성안</p>
+
+<div class="mockup" style="margin-top:24px;">
+  <div class="mockup-header">Dashboard Layout</div>
+  <div class="mockup-body" style="padding:0;display:flex;height:480px;font-family:system-ui;font-size:13px;">
+
+    <!-- Sidebar -->
+    <div style="width:220px;background:#1a2332;color:#fff;padding:20px 0;flex-shrink:0;display:flex;flex-direction:column;">
+      <div style="padding:0 20px 24px;border-bottom:1px solid rgba(255,255,255,0.1);">
+        <div style="font-size:18px;font-weight:700;color:#4ecdc4;">Minish View</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px;">병의원 데이터 대시보드</div>
+      </div>
+
+      <div style="padding:16px 12px;flex:1;">
+        <div style="background:rgba(78,205,196,0.15);border-left:3px solid #4ecdc4;padding:10px 12px;border-radius:0 6px 6px 0;margin-bottom:4px;color:#4ecdc4;font-weight:600;">
+          📊 Main KPI 분석
+        </div>
+        <div style="padding:10px 12px;margin-bottom:4px;color:rgba(255,255,255,0.6);border-radius:6px;">
+          📢 마케팅 성과
+        </div>
+        <div style="padding:10px 12px;margin-bottom:4px;color:rgba(255,255,255,0.6);border-radius:6px;">
+          🔍 검색/유입 추이
+        </div>
+        <div style="padding:10px 12px;margin-bottom:4px;color:rgba(255,255,255,0.6);border-radius:6px;">
+          🔄 상담 퍼널
+        </div>
+      </div>
+
+      <div style="padding:12px 20px;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.4);">
+        미니쉬치과병원
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div style="flex:1;background:#f5f7fa;display:flex;flex-direction:column;overflow:hidden;">
+
+      <!-- Header / Filter Bar -->
+      <div style="background:#fff;padding:16px 24px;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:16px;font-weight:700;color:#1a2332;">Main KPI 분석</div>
+          <div style="font-size:11px;color:#9ca3af;margin-top:2px;">병의원 운영 핵심 지표를 한눈에 확인하세요</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <div style="background:#f3f4f6;padding:6px 12px;border-radius:6px;font-size:12px;color:#374151;border:1px solid #e5e7eb;">
+            📅 26/03/01 ~ 26/03/11
+          </div>
+          <div style="background:#f3f4f6;padding:6px 12px;border-radius:6px;font-size:12px;color:#374151;border:1px solid #e5e7eb;">
+            🏥 미니쉬치과병원
+          </div>
+          <div style="background:#f3f4f6;padding:6px 12px;border-radius:6px;font-size:12px;color:#374151;border:1px solid #e5e7eb;">
+            기준일: 26/03
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div style="flex:1;padding:20px 24px;overflow-y:auto;">
+
+        <!-- KPI Summary Cards Row -->
+        <div style="display:flex;gap:12px;margin-bottom:20px;">
+          <div style="flex:1;background:#fff;border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+            <div style="font-size:11px;color:#9ca3af;">광고비</div>
+            <div style="font-size:18px;font-weight:700;color:#1a2332;margin-top:4px;">7,235,693</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;">▼56.70%</div>
+          </div>
+          <div style="flex:1;background:#fff;border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+            <div style="font-size:11px;color:#9ca3af;">매출액</div>
+            <div style="font-size:18px;font-weight:700;color:#1a2332;margin-top:4px;">633,798,760</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;">▲18.05%</div>
+          </div>
+          <div style="flex:1;background:#fff;border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+            <div style="font-size:11px;color:#9ca3af;">확정금액</div>
+            <div style="font-size:18px;font-weight:700;color:#1a2332;margin-top:4px;">307,350,000</div>
+            <div style="font-size:11px;color:#ef4444;margin-top:4px;">▼19.31%</div>
+          </div>
+          <div style="flex:1;background:#fff;border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+            <div style="font-size:11px;color:#9ca3af;">신환수</div>
+            <div style="font-size:18px;font-weight:700;color:#1a2332;margin-top:4px;">120</div>
+            <div style="font-size:11px;color:#10b981;margin-top:4px;">▲7.14%</div>
+          </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div style="display:flex;gap:16px;">
+          <!-- KPI Progress -->
+          <div style="flex:1;background:#fff;border-radius:8px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+            <div style="font-size:13px;font-weight:600;color:#1a2332;margin-bottom:12px;">주요 KPI</div>
+            <div style="margin-bottom:10px;">
+              <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;">
+                <span style="color:#6b7280;">매출액</span><span style="font-weight:600;color:#1a2332;">25.4%</span>
+              </div>
+              <div style="background:#f3f4f6;border-radius:4px;height:8px;overflow:hidden;">
+                <div style="background:#4ecdc4;height:100%;width:25%;border-radius:4px;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom:10px;">
+              <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;">
+                <span style="color:#6b7280;">확정금액</span><span style="font-weight:600;color:#1a2332;">12.3%</span>
+              </div>
+              <div style="background:#f3f4f6;border-radius:4px;height:8px;overflow:hidden;">
+                <div style="background:#4ecdc4;height:100%;width:12%;border-radius:4px;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom:10px;">
+              <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;">
+                <span style="color:#6b7280;">신환수</span><span style="font-weight:600;color:#1a2332;">57.1%</span>
+              </div>
+              <div style="background:#f3f4f6;border-radius:4px;height:8px;overflow:hidden;">
+                <div style="background:#4ecdc4;height:100%;width:57%;border-radius:4px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Line Chart Area -->
+          <div style="flex:2;background:#fff;border-radius:8px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+            <div style="font-size:13px;font-weight:600;color:#1a2332;margin-bottom:12px;">내원경로별 분석 · 월별 KPI 추이</div>
+            <div style="display:flex;gap:12px;margin-bottom:12px;">
+              <span style="font-size:10px;color:#3b82f6;">● 광고</span>
+              <span style="font-size:10px;color:#ef4444;">● 소개</span>
+              <span style="font-size:10px;color:#f59e0b;">● 협력</span>
+              <span style="font-size:10px;color:#9ca3af;">● 기타</span>
+            </div>
+            <!-- Simplified chart mockup -->
+            <svg viewBox="0 0 400 120" style="width:100%;height:120px;">
+              <!-- Grid lines -->
+              <line x1="0" y1="30" x2="400" y2="30" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="0" y1="60" x2="400" y2="60" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="0" y1="90" x2="400" y2="90" stroke="#f3f4f6" stroke-width="1"/>
+              <!-- Blue line (광고) -->
+              <polyline fill="none" stroke="#3b82f6" stroke-width="2" points="20,80 80,50 140,40 200,35 260,30 320,25 380,60"/>
+              <!-- Red line (소개) -->
+              <polyline fill="none" stroke="#ef4444" stroke-width="2" points="20,90 80,70 140,55 200,50 260,55 320,45 380,85"/>
+              <!-- Orange line (협력) -->
+              <polyline fill="none" stroke="#f59e0b" stroke-width="2" points="20,100 80,95 140,90 200,95 260,90 320,88 380,95"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:24px;padding:16px;background:rgba(78,205,196,0.1);border-radius:8px;border-left:3px solid #4ecdc4;">
+  <h3 style="margin-bottom:8px;">핵심 구성 요소</h3>
+  <ul style="font-size:13px;line-height:1.8;color:#374151;">
+    <li><strong>사이드바</strong>: 다크 네이비 (#1a2332) + 민트 액센트 (#4ecdc4), 4개 뷰 메뉴</li>
+    <li><strong>헤더/필터바</strong>: 분석기간, 병원, 기준일 선택</li>
+    <li><strong>KPI 카드 행</strong>: 전월 동기간 대비 수치 + 증감률</li>
+    <li><strong>차트 영역</strong>: 좌측 KPI 프로그레스 + 우측 라인 차트</li>
+    <li><strong>하단 테이블</strong>: 상세 KPI 데이터 (이 목업에서는 생략)</li>
+  </ul>
+</div>
