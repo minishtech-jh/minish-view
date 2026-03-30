@@ -13,7 +13,12 @@ export default defineConfig({
       exposes: {
         './ViewApp': './src/ViewApp.tsx',
       },
-      shared: ['react', 'react-dom', 'react-router-dom'],
+      shared: {
+        // @ts-expect-error
+        react: { singleton: true, requiredVersion: false },
+        'react-dom': { singleton: true, requiredVersion: false },
+        'react-router-dom': { singleton: true, requiredVersion: false },
+      },
     }),
   ],
   build: {
