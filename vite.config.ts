@@ -8,16 +8,15 @@ export default defineConfig({
     react(),
     tailwindcss(),
     federation({
-      name: 'minish-view',
+      name: 'view',
       filename: 'remoteEntry.js',
       exposes: {
         './ViewApp': './src/ViewApp.tsx',
       },
       shared: {
-        // @ts-expect-error
-        react: { singleton: true, requiredVersion: false },
-        'react-dom': { singleton: true, requiredVersion: false },
-        'react-router-dom': { singleton: true, requiredVersion: false },
+        react: { singleton: true, requiredVersion: false } as Record<string, unknown>,
+        'react-dom': { singleton: true, requiredVersion: false } as Record<string, unknown>,
+        'react-router-dom': { singleton: true, requiredVersion: false } as Record<string, unknown>,
       },
     }),
   ],
