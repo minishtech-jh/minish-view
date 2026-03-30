@@ -13,16 +13,11 @@ export default defineConfig({
       exposes: {
         './ViewApp': './src/ViewApp.tsx',
       },
-      shared: {
-        react: { singleton: true } as Record<string, unknown>,
-        'react-dom': { singleton: true } as Record<string, unknown>,
-        'react-router': { singleton: true } as Record<string, unknown>,
-        'react-router-dom': { singleton: true } as Record<string, unknown>,
-      },
+      shared: ['react', 'react-dom'],
     }),
   ],
   resolve: {
-    dedupe: ['react', 'react-dom'],
+    dedupe: ['react', 'react-dom', 'react-router', 'react-router-dom'],
   },
   build: {
     target: 'esnext',
