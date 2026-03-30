@@ -13,7 +13,10 @@ export default defineConfig({
       exposes: {
         './ViewApp': './src/ViewApp.tsx',
       },
-      shared: ['react', 'react-dom'],
+      shared: {
+        react: { singleton: true } as Record<string, unknown>,
+        'react-dom': { singleton: true } as Record<string, unknown>,
+      },
     }),
   ],
   resolve: {
