@@ -64,9 +64,9 @@ export function MainKpiPage() {
           <h2 className="text-sm font-semibold text-gray-900">전월 동기간 대비</h2>
           <InfoTooltip text="전월 같은 기간의 실적과 비교한 증감률입니다. 동일 영업일 수 기준으로 산출됩니다." />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-3">
+        <div className="flex flex-wrap gap-3">
           {kpiSummary.prevPeriod.map((item) => (
-            <div key={item.label} className="p-3 bg-gray-50 rounded-lg">
+            <div key={item.label} className="flex-1 min-w-[130px] p-3 bg-gray-50 rounded-lg">
               <p className="text-[11px] text-gray-500 font-medium mb-1 truncate">{item.label}</p>
               <p className="text-sm font-bold text-gray-900 tabular-nums">
                 {item.unit === '원' ? `${item.current.toLocaleString()}` : `${item.current.toLocaleString()}${item.unit}`}
@@ -86,9 +86,9 @@ export function MainKpiPage() {
           <h2 className="text-sm font-semibold text-gray-900">당월 일평균 대비</h2>
           <InfoTooltip text="당월 일평균 실적과 기준일 실적을 비교합니다. 일별 편차를 파악하여 운영 효율을 점검할 수 있습니다." />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-3">
+        <div className="flex flex-wrap gap-3">
           {kpiSummary.dailyAvg.map((item) => (
-            <div key={item.label} className="p-3 bg-gray-50 rounded-lg">
+            <div key={item.label} className="flex-1 min-w-[130px] p-3 bg-gray-50 rounded-lg">
               <p className="text-[11px] text-gray-500 font-medium mb-1 truncate">{item.label}</p>
               <p className="text-sm font-bold text-gray-900 tabular-nums">
                 일평균 : {item.avg.toLocaleString()}

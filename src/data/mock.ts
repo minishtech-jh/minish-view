@@ -10,8 +10,7 @@ export const kpiSummary = {
     { label: '확정금액', current: 307_350_000, prev: 380_899_921, change: -19.31, unit: '원' },
     { label: '정보제공수', current: 80, prev: 104, change: -23.08, unit: '건' },
     { label: '신환수', current: 120, prev: 112, change: 7.14, unit: '명' },
-    { label: '미니쉬내원 신환수', current: 89, prev: 85, change: 4.71, unit: '명' },
-    { label: '미니쉬위드의 신환수', current: 22, prev: 27, change: -18.52, unit: '명' },
+    { label: '미니쉬 신환수', current: 111, prev: 112, change: -0.89, unit: '명' },
     { label: '진료적단가', current: 4_454_348, prev: 3_526_851, change: 26.30, unit: '원' },
   ],
   dailyAvg: [
@@ -19,8 +18,7 @@ export const kpiSummary = {
     { label: '매출액', avg: 55_850_739, base: 75_291_370, change: -34.81 },
     { label: '확정금액', avg: 30_735_000, base: 0, change: 100 },
     { label: '신환수', avg: 10, base: 16, change: -60.0 },
-    { label: '미니쉬내원 신환수', avg: 8, base: 14, change: -75.0 },
-    { label: '미니쉬위드의 신환수', avg: 2, base: 0, change: 100 },
+    { label: '미니쉬 신환수', avg: 10, base: 14, change: -28.57 },
     { label: '진료적단가', avg: 4_454_348, base: 0, change: 100 },
   ],
   mainKpis: [
@@ -28,8 +26,7 @@ export const kpiSummary = {
     { label: '확정금액', pct: 12.3, target: '2,500,000,000원', current: '307,350,000원' },
     { label: '정보제공수', pct: 14.8, target: '540건', current: '80건' },
     { label: '신환수', pct: 57.1, target: '210건', current: '120건' },
-    { label: '미니쉬내원 신환수', pct: 42.4, target: '210건', current: '89건' },
-    { label: '미니쉬위드의 신환수', pct: 18.3, target: '120건', current: '22건' },
+    { label: '미니쉬 신환수', pct: 33.6, target: '330건', current: '111건' },
   ],
   monthlyTrend: {
     신환수: [
@@ -39,7 +36,7 @@ export const kpiSummary = {
       { month: '25/12', ad: 189, referral: 163, partner: 26, other: 6 },
       { month: '26/01', ad: 207, referral: 130, partner: 26, other: 26 },
       { month: '26/02', ad: 184, referral: 96, partner: 25, other: 20 },
-      { month: '26/03', ad: 68, referral: 37, partner: 9, other: 154 },
+      { month: '26/03', ad: 68, referral: 37, partner: 9, other: 6 },
     ],
     매출액: [
       { month: '25/09', ad: 98_500_000, referral: 82_300_000, partner: 24_100_000, other: 0 },
@@ -48,7 +45,7 @@ export const kpiSummary = {
       { month: '25/12', ad: 462_100_000, referral: 398_500_000, partner: 78_200_000, other: 15_400_000 },
       { month: '26/01', ad: 512_300_000, referral: 318_500_000, partner: 82_600_000, other: 62_400_000 },
       { month: '26/02', ad: 448_900_000, referral: 234_600_000, partner: 72_100_000, other: 48_200_000 },
-      { month: '26/03', ad: 266_613_000, referral: 212_019_000, partner: 154_817_000, other: 350_000 },
+      { month: '26/03', ad: 266_612_980, referral: 212_018_880, partner: 154_817_400, other: 349_500 },
     ],
     확정금액: [
       { month: '25/09', ad: 42_000_000, referral: 35_800_000, partner: 10_200_000, other: 0 },
@@ -66,7 +63,7 @@ export const kpiSummary = {
       { month: '25/12', ad: 245, referral: 142, partner: 32, other: 8 },
       { month: '26/01', ad: 268, referral: 115, partner: 35, other: 30 },
       { month: '26/02', ad: 238, referral: 88, partner: 28, other: 24 },
-      { month: '26/03', ad: 280, referral: 150, partner: 85, other: 25 },
+      { month: '26/03', ad: 41, referral: 22, partner: 13, other: 4 },
     ],
   },
   channelKpi: [
@@ -93,7 +90,7 @@ export const marketingData = {
     { month: '25/12', naver: 2_900_000, google: 1_600_000, instagram: 1_000_000, blog: 480_000, youtube: 450_000 },
     { month: '26/01', naver: 3_000_000, google: 1_650_000, instagram: 1_050_000, blog: 500_000, youtube: 480_000 },
     { month: '26/02', naver: 3_300_000, google: 1_900_000, instagram: 1_250_000, blog: 520_000, youtube: 550_000 },
-    { month: '26/03', naver: 3_200_000, google: 1_800_000, instagram: 1_200_000, blog: 500_000, youtube: 536_000 },
+    { month: '26/03', naver: 3_200_000, google: 1_800_000, instagram: 1_200_000, blog: 500_000, youtube: 535_693 },
   ],
 }
 
