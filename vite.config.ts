@@ -13,20 +13,15 @@ export default defineConfig({
       exposes: {
         './ViewApp': './src/ViewApp.tsx',
       },
-      shared: {
-        react: { singleton: true, requiredVersion: false, eager: false } as Record<string, unknown>,
-        'react-dom': { singleton: true, requiredVersion: false, eager: false } as Record<string, unknown>,
-        'react-router': { singleton: true, requiredVersion: false } as Record<string, unknown>,
-        'react-router-dom': { singleton: true, requiredVersion: false } as Record<string, unknown>,
-        recharts: { singleton: true, requiredVersion: false } as Record<string, unknown>,
-      },
+      shared: ['react', 'react-dom', 'react-router-dom'],
     }),
   ],
+  resolve: {
+    dedupe: ['react', 'react-dom'],
+  },
   build: {
-    modulePreload: false,
     target: 'esnext',
     minify: false,
-    cssCodeSplit: false,
   },
   server: {
     port: 5174,
