@@ -14,9 +14,11 @@ export default defineConfig({
         './ViewApp': './src/ViewApp.tsx',
       },
       shared: {
-        react: { singleton: true, requiredVersion: false } as Record<string, unknown>,
-        'react-dom': { singleton: true, requiredVersion: false } as Record<string, unknown>,
+        react: { singleton: true, requiredVersion: false, eager: false } as Record<string, unknown>,
+        'react-dom': { singleton: true, requiredVersion: false, eager: false } as Record<string, unknown>,
+        'react-router': { singleton: true, requiredVersion: false } as Record<string, unknown>,
         'react-router-dom': { singleton: true, requiredVersion: false } as Record<string, unknown>,
+        recharts: { singleton: true, requiredVersion: false } as Record<string, unknown>,
       },
     }),
   ],
