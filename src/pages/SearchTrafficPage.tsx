@@ -49,7 +49,7 @@ export function SearchTrafficPage() {
       <div className="bg-white rounded-[var(--radius-card)] p-5 shadow-[var(--shadow-card)]">
         <h2 className="text-sm font-semibold text-gray-900 mb-4">주간 유입 추이</h2>
         <div className="h-72">
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height={250}>
             <AreaChart data={searchTrafficData.weeklyTraffic}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
               <XAxis dataKey="week" tick={{ fontSize: 11, fill: '#9ca3af' }} />

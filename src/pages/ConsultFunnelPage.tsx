@@ -60,7 +60,7 @@ export function ConsultFunnelPage() {
         <div className="bg-white rounded-[var(--radius-card)] p-5 shadow-[var(--shadow-card)]">
           <h2 className="text-sm font-semibold text-gray-900 mb-4">채널별 전환 성과</h2>
           <div className="h-64">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height={250}>
               <BarChart data={funnelData.conversionByChannel} layout="vertical">
                 <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
                 <XAxis type="number" tick={{ fontSize: 11, fill: '#9ca3af' }} />
@@ -110,7 +110,7 @@ export function ConsultFunnelPage() {
         <div className="bg-white rounded-[var(--radius-card)] p-5 shadow-[var(--shadow-card)]">
           <h2 className="text-sm font-semibold text-gray-900 mb-4">주간 전환 추이</h2>
           <div className="h-64">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height={250}>
               <LineChart data={funnelData.weeklyConversions}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
                 <XAxis dataKey="week" tick={{ fontSize: 11, fill: '#9ca3af' }} />

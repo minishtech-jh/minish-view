@@ -54,7 +54,7 @@ export function MarketingPage() {
         <div className="xl:col-span-2 bg-white rounded-[var(--radius-card)] p-5 shadow-[var(--shadow-card)]">
           <h2 className="text-sm font-semibold text-gray-900 mb-4">월별 채널 광고비 추이</h2>
           <div className="h-72">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height={250}>
               <BarChart data={marketingData.monthlySpend}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
                 <XAxis dataKey="month" tick={{ fontSize: 11, fill: '#9ca3af' }} />
@@ -78,7 +78,7 @@ export function MarketingPage() {
         <div className="bg-white rounded-[var(--radius-card)] p-5 shadow-[var(--shadow-card)]">
           <h2 className="text-sm font-semibold text-gray-900 mb-4">광고비 비중</h2>
           <div className="h-52">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height={250}>
               <PieChart>
                 <Pie
                   data={spendPie}
